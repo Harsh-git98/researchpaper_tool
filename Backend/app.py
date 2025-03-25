@@ -70,7 +70,7 @@ def find_similar_papers_sbert(query, top_n=5):
 # Set up the Streamlit page
 st.set_page_config(page_title="Research Paper Finder", layout="wide")
 st.title("🔍 Research Paper Finder")
-st.subheader("Discover relevant research papers based on your query.")
+st.subheader("Discover relevant research papers based on your query and research topics")
 
 # Input query
 query = st.text_area("Describe your research:", height=100, placeholder="Enter your research description here.")
@@ -78,7 +78,7 @@ query = st.text_area("Describe your research:", height=100, placeholder="Enter y
 # Button to trigger search
 if st.button("Search"):
     if query:
-        st.write("\n📄 **Relevant Research Papers:**")
+        st.subheader("\n📄 **Relevant Research Papers:**")
         
         # Find similar papers using KNN
         results = find_similar_papers_knn(query)
