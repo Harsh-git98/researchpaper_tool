@@ -13,7 +13,7 @@ const App = () => {
       fontFamily: 'Arial, sans-serif',
       textAlign: 'center',
     }}>
-      {/* Header */}
+      
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -27,7 +27,6 @@ const App = () => {
         <h1>Research Paper Research Tool</h1>
       </motion.div>
 
-      {/* Search Bar */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -91,10 +90,10 @@ const App = () => {
           <p>By: John Doe</p>
           <p>This is a summary of an example paper.</p>
         </motion.div>
-        {/* Add more result cards here */}
+       
       </div>
 
-      {/* Footer */}
+      
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
