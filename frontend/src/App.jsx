@@ -8,6 +8,7 @@ const App = () => {
     console.log('Searching for:', searchTerm);
   };
 
+
   return (
     <div style={{
       fontFamily: 'Arial, sans-serif',
@@ -92,6 +93,8 @@ const App = () => {
         </motion.div>
        
       </div>
+      <Link to="/saved">Saved</Link>
+      
 
       
       <motion.div
