@@ -767,3 +767,12 @@ input{
   width: 80vw;
   text-align: center;
 }
+
+
+
+
+
+
+.results-section{
+  border: 2px solid red;
+}

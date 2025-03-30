@@ -15,7 +15,7 @@ function Header({OpenSidebar}){
                 {/* <BsSearch className='icon'/> */}
             </div>
             <div className="header-right">
-                <h4>#IT ROCKS</h4>
+                <h4>DEPARTMENT OF INFORMATION TECHNOLOGY</h4>
             </div>
         </header>
       
