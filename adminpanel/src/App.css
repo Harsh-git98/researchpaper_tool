@@ -1,10 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #000000;
+  background: #0a0b24;
   --gap: 5em;
   --line: 1px;
-  --color: rgba(255, 255, 255, 0.2);
+  --color: #6e6189;
 
   background-image: linear-gradient(
       -90deg,
@@ -37,7 +37,7 @@ body {
 
 .icon {
   vertical-align: middle;
-  color: red;
+  color: #9c90aa;
   line-height: 1px;
   font-size: 20px;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 .close_icon {
-  color: rgb(17, 17, 17);
+  color: #cbc9cc;
   margin-left: 30px;
   margin-top: 10px;
   scale: 1.4;
@@ -92,12 +92,11 @@ body {
 #sidebar {
   grid-area: sidebar;
   /* height: 100%; */
-  background-color: #690b0b;
+  background-color: #443a67;
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
- border-top-right-radius: 3vh;
- border-bottom-right-radius: 3vh;
+  border-right: #9c90aa 2px solid;
  display: flex;
   flex-direction: column; /* Ensures the footer stays at the bottom */
   height: 100vh;
@@ -108,7 +107,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px 15px 30px;
-  background-color: #ff0000;
+  background-color: #211e46;
 }
 
 .sidebar-title > span {
@@ -119,6 +118,7 @@ body {
   margin-top: 15px;
   font-size: 20px;
   font-weight: 700;
+  color: #cbc9cc;
   
 }
 
@@ -146,7 +146,7 @@ footer {
   padding: 10px;
    /* Optional: Background color for the footer */
   font-size: 12px;
-  color: #daa431; /* Optional: Footer text color */
+  color: #000003; /* Optional: Footer text color */
 }
 
 
@@ -157,7 +157,7 @@ footer {
 }
 
 .sidebar-list-item:hover {
-  background-color: rgba(187, 88, 88, 0.637);
+  background-color: #6e6189;
   cursor: pointer;
 }
 
@@ -210,7 +210,7 @@ footer {
 
 .card:first-child {
   background-color: transparent;
-  border: 4px red solid;
+  border: 4px white solid;
   border-radius: 15px;
   background-color: #f0555549;
 }
@@ -338,15 +338,6 @@ footer {
 
 
 
-table {
-  width: 100%;
-  min-height: 50vh;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 14px;
-  text-align: center;
-  background: rgb(226, 13, 13);
-}
 
 td {
   border: 2px solid #4e0404;
@@ -398,7 +389,7 @@ th {
   margin-left: 5%;
   height: 20vh;
   background: #16161d00;
-  border: 2px solid #ff0000;
+  border: 2px solid #9c90aa;
   border-radius: 4px;
   position: relative;
   transform-style: preserve-3d;
@@ -417,11 +408,8 @@ th {
   right: 100px;
   transform: translateY(-50%);
   transition: transform .5s;
-  font: 700 1.5rem monospace;
-  text-shadow: -1px -1px 0 #ff0000,  
-    1px -1px 0 #3a0202,
-    -1px 1px 0 #ff0202,
-     1px 1px 0 #ff0000;
+  font: 700 1.5rem monospace;,  
+   
 }
 
 .card1:hover .card_title {
@@ -736,7 +724,8 @@ a{
 }
 
 h4{
-  color: red;
+  color: #9c90aa;
+  font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .formbox{
@@ -774,5 +763,5 @@ input{
 
 
 .results-section{
-  border: 2px solid red;
+  border: ;
 }
