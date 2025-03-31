@@ -5,7 +5,7 @@ import React from 'react'
      <main className="main-container">
        <div style={{
   margin: '0 auto',
-  backgroundColor: '#7f1d1d',
+  backgroundColor: '#211e46',
   padding: '24px',
   borderRadius: '16px',
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
@@ -15,9 +15,9 @@ import React from 'react'
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: '16px',
-    borderBottom: '2px solid #fca5a5',
+    borderBottom: '2px solid #cbc9cc',
     paddingBottom: '8px'
-  }}>Department Information</h1>
+  }}>About IT Department</h1>
   <p style={{ lineHeight: '1.6', color: '#e5e7eb' }}>
     The Department of Information Technology started its journey in 2000. It is one of the youngest departments of
     this 168-year-old institute. The department specializes in diverse domains of research ranging from VLSI
@@ -32,25 +32,25 @@ import React from 'react'
     in the institute.
   </p>
 
-  <h2 style={{
+  <h3 style={{
     fontSize: '20px',
     fontWeight: '600',
     marginTop: '24px',
-    borderBottom: '2px solid #fca5a5',
+    borderBottom: '2px solid #000003',
     paddingBottom: '8px'
-  }}>Faculty Members</h2>
+  }}>Faculty Members</h3>
   <div style={{ marginTop: '16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
     {facultyData.map((faculty, index) => (
       <div key={index} style={{
-        backgroundColor: '#b91c1c',
+        backgroundColor: '#9c90aa',
         padding: '16px',
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
       }}>
         <h3 style={{ fontSize: '18px', fontWeight: '600' }}>{faculty.name}</h3>
-        <p style={{ fontSize: '14px', color: '#d1d5db' }}>{faculty.designation}</p>
-        <p style={{ fontSize: '14px', color: '#d1d5db' }}>📞 {faculty.phone}</p>
-        <p style={{ fontSize: '14px', color: '#d1d5db' }}>✉ {faculty.email}</p>
+        <p style={{ fontSize: '14px', color: '#000003' }}>{faculty.designation}</p>
+        <p style={{ fontSize: '14px', color: '#000' }}>📞 {faculty.phone}</p>
+        <p style={{ fontSize: '14px', color: '#000003' }}>✉ {faculty.email}</p>
       </div>
     ))}
   </div>
@@ -64,7 +64,7 @@ import React from 'react'
    {
      name: "Arindam Biswas",
      designation: "Professor",
-     phone: "+91 33 26680525/0526 x 3003",
+     phone: "+91 33 26680525/0526 ",
      email: "abiswas@it.iiests.ac.in",
    },
    {
@@ -76,13 +76,13 @@ import React from 'react'
    {
      name: "Chandan Giri",
      designation: "Associate Professor",
-     phone: "+91 33 26684561 x260",
+     phone: "+91 33 26684561 ",
      email: "chandan@it.iiests.ac.in",
    },
    {
      name: "Hafizur Rahaman",
      designation: "Professor",
-     phone: "+91 33 26684561 x309/249",
+     phone: "+91 33 26684561 ",
      email: "rahaman_h@it.iiests.ac.in",
    },
    {
@@ -94,7 +94,7 @@ import React from 'react'
    {
      name: "Prasun Ghosal",
      designation: "Associate Professor",
-     phone: "+91 33 26684561 x260",
+     phone: "+91 33 26684561 ",
      email: "p_ghosal@it.iiests.ac.in",
    },
    {
@@ -106,31 +106,31 @@ import React from 'react'
    {
      name: "Santi Prasad Maity",
      designation: "Professor",
-     phone: "+91 33 26684561 x858",
+     phone: "+91 33 26684561 ",
      email: "santipmaity@it.iiests.ac.in",
    },
    {
      name: "Shyamalendu Kandar",
      designation: "Assistant Professor",
-     phone: "+91 33 26684561 x260",
+     phone: "+91 33 26684561 ",
      email: "shyamalenduk@it.iiests.ac.in",
    },
    {
      name: "Sukanta Das",
      designation: "Associate Professor",
-     phone: "+91 33 26684561 x260",
+     phone: "+91 33 26684561 ",
      email: "sukanta@it.iiests.ac.in",
    },
    {
      name: "Surajit Kumar Roy",
      designation: "Associate Professor",
-     phone: "+91 33 26684561 x260",
+     phone: "+91 33 26684561 ",
      email: "suraroy@it.iiests.ac.in",
    },
    {
      name: "Tuhina Samanta",
      designation: "Head & Associate Professor",
-     phone: "+91 33 26684561 x260",
+     phone: "+91 33 26684561 ",
      email: "t_samanta@it.iiests.ac.in",
    },
  ];
