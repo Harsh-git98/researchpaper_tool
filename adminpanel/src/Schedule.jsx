@@ -47,24 +47,25 @@ function Schedule() {
 
     return (
         <main className="main-container">
-            <h1>Search History</h1>
+            <h1>History</h1>
+      
             {loading ? (
                 <div style={{ display: 'flex', justifyContent: 'center',alignItems:'center', marginTop: '20px' ,height:'80%'}}>
                     <HashLoader color="#6e6189" size={100} />
                 </div>
             ) : (
                 <>
-                    <div className="search-container" style={{ marginBottom: '20px' }}>
+                    <div className="search-container" style={{ marginBottom: '20px' ,width:'100%' }}>
                         <input 
                             type="text" 
                             placeholder="Search history..." 
                             value={searchQuery} 
                             onChange={(e) => setSearchQuery(e.target.value)} 
-                            style={{ padding: '10px', marginRight: '10px', border: '1px solid #ccc', borderRadius: '5px' }}
+                            style={{ padding: '10px', marginRight: '10px', border: '1px solid #ccc', borderRadius: '5px', fontSize: '16px', backgroundColor: '#211e46', color: 'White', width:'80%' }}
                         />
                         <button 
                             onClick={handleSearch} 
-                            style={{ padding: '10px 20px', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+                            style={{ padding: '10px 20px', background: 'White', color: '#211E46', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
                         >
                             Search
                         </button>

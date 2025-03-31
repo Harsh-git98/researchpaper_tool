@@ -4,7 +4,7 @@ function Home() {
     const [query, setQuery] = useState("");
     const [papers, setPapers] = useState([]);
     const [professors, setProfessors] = useState([]);
-    const [error, setError] = useState("Search for research papers and professors here.");
+    const [error, setError] = useState("List will appear here...");
     const [expandedAbstracts, setExpandedAbstracts] = useState({});
 
     const toggleAbstract = (index) => {
@@ -65,12 +65,12 @@ function Home() {
                     
                 </figure>
             </div>
-            <div className='main-title'>
-                <h3 style={{textAlign:'center', margin:'auto auto'}}>Search Here</h3>
-            </div>
+           <br></br>
 
-            <div>
+            <div style={{width:'90%', margin:'auto auto'}}>
+                
                 <form onSubmit={handleSubmit} style={{ margin: '20px auto', textAlign: 'center', padding:'20px', borderRadius:'20px', border:'4px solid #6e6189', backgroundColor:'#000003', boxShadow:'0 0 10px rgba(0,0,0,0.1)', display: 'flex', flexDirection:'column', gap:'10px'}}>
+                <h3 style={{textAlign:'center', margin:'auto auto' ,padding:'10px'}}>Search Here</h3>
                     <textarea 
                         value={query} 
                         onChange={(e) => setQuery(e.target.value)} 
@@ -79,7 +79,7 @@ function Home() {
                         
                         style={{  padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '16px', backgroundColor: '#211e46', color: 'White' ,maxHeight:'20vh',minHeight:'20vh', resize:'none'}}
                     />
-                    <button type="submit" style={{border:'black 2px solid', borderRadius:'10px', padding:'10px', fontWeight:'bold'}}>Search</button>
+                    <button type="submit" style={{border:'black 2px solid', borderRadius:'10px', padding:'10px', fontWeight:'bold', margin:'10px 10px'}}>Search</button>
                 </form>
                 {error && <h3 className="error-message">{error}</h3>}
             </div>
@@ -94,7 +94,7 @@ function Home() {
                                 <div key={`paper-${index}`} style={{ border: "3px solid #6e6189", padding: "10px", borderRadius: "15px", marginBottom: "10px", backgroundColor: "#0b0b15", minHeight:'120px', boxShadow:'5px 5px 10px rgba(255, 255, 255, 0.5)', marginBottom: "30px" }}>
                                     <h4 style={{ margin: "10px 0" }}>{paper.title} ({paper.year})</h4>
                                     <p>
-                                        <strong>Abstract:</strong> {expandedAbstracts[index] ? paper.abstract : truncateText(paper.abstract)}
+                                        <strong>Abstract:</strong><br></br> <br></br>{expandedAbstracts[index] ? paper.abstract : truncateText(paper.abstract)}
                                         {paper.abstract.length > 150 && (
                                             <span 
                                                 onClick={() => toggleAbstract(index)} 
@@ -113,7 +113,7 @@ function Home() {
 
                     {professors.length > 0 && (
                         <div style={{ marginBottom: "20px", flexDirection: "row", borderLeft:'3px solid rgba(255, 255, 255, 0.38)', marginLeft:'20px', paddingLeft:'20px', backgroundColor: "", padding: "10px", borderRadius: "15px", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}>
-                            <h3 style={{ borderBottom: "2px solid #ddd", paddingBottom: "5px" ,}}>Matching Professors:</h3>
+                            <h3 style={{ borderBottom: "2px solid #ddd", paddingBottom: "5px" ,}}>Suggested Professors:</h3>
                             <div style={{ display: "flex", flexDirection: "row", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
                                 {professors.map((professor, index) => (
                                 <div key={`prof-${index}`} style={{ border: "1px solid #ccc", padding: "10px", borderRadius: "5px", marginBottom: "10px", backgroundColor: "#0b0b15" , width: "20vw", textAlign: "center" }}>
