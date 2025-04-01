@@ -57,6 +57,10 @@ def find_similar_professors(query: str, top_n: int = 3):
     distances, indices = knn_interests.kneighbors(query_vector, n_neighbors=top_n)
     return interests_df.iloc[indices[0]][["Name", "Field of Interest"]].to_dict(orient="records")
 
+
+
+# Backend Work
+
 @app.post("/search")
 async def search_papers(request: QueryRequest):
     query = request.query.strip()
@@ -83,6 +87,7 @@ async def search_papers(request: QueryRequest):
     except Exception as e:
         print(f"Error processing query: {e}")
         return {"error": "An error occurred while processing your query."}
+
 
 @app.get("/search/history")
 async def get_search_history():
