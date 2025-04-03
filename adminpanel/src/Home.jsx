@@ -84,7 +84,7 @@ function Home() {
                 {error && <h3 className="error-message">{error}</h3>}
             </div>
 
-            <div style={{ padding: "20px", margin: "auto", fontFamily: "Arial, sans-serif" ,display:'flex', flexDirection:'row', gap:'10px'}}>
+            <div style={{ padding: "20px", margin: "auto", fontFamily: "Arial, sans-serif" ,display:'flex', flexDirection:'row', gap:'10px', justifyContent:'center', flexWrap:'wrap'}}>
             {(papers.length > 0 || professors.length > 0) && (
                 <>
                     {papers.length > 0 && (
@@ -112,7 +112,7 @@ function Home() {
                     )}
 
                     {professors.length > 0 && (
-                        <div style={{ marginBottom: "20px", flexDirection: "row", borderLeft:'3px solid rgba(255, 255, 255, 0.38)', marginLeft:'20px', paddingLeft:'20px', backgroundColor: "", padding: "10px", borderRadius: "15px", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}>
+                        <div style={{ marginBottom: "20px", flexDirection: "row", borderLeft:'3px solid rgba(255, 255, 255, 0.38)', marginLeft:'20px', paddingLeft:'20px', backgroundColor: "", padding: "10px", borderRadius: "15px", boxShadow: "0 0 10px rgba(0,0,0,0.1)",borderRight:'3px solid rgba(255, 255, 255, 0.38)', }}>
                             <h3 style={{ borderBottom: "2px solid #ddd", paddingBottom: "5px" ,}}>Suggested Professors:</h3>
                             <div style={{ display: "flex", flexDirection: "row", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
                                 {professors.map((professor, index) => (
