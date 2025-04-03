@@ -1,8 +1,42 @@
 import React from 'react'
-
+import { useEffect, useState } from 'react'
+import HashLoader from 'react-spinners/HashLoader'
  function Analytics() {
+
+  const [searchHistory, setSearchHistory] = useState([])
+      const [filteredHistory, setFilteredHistory] = useState([])
+      const [searchQuery, setSearchQuery] = useState('')
+      const [loading, setLoading] = useState(true)
+  
+      useEffect(() => {
+          const fetchHistory = async () => {
+              try {
+                  const response = await fetch('http://localhost:8000/search/history')
+                  const data = await response.json();
+                  setTimeout(() => {
+                    if (data.history) {
+                        setSearchHistory(data.history);
+                        setFilteredHistory(data.history);
+                    }
+                    setLoading(false);
+                }, 2000);
+              } catch (error) {
+                  console.error('Error fetching history:', error)
+              }
+          }
+          
+          fetchHistory()
+      }, [])
+
    return (
-     <main className="main-container">
+    <main className="main-container">
+    {loading ? (
+      <div style={{ display: 'flex', justifyContent: 'center',alignItems:'center', marginTop: '20px' ,height:'80%'}}>
+          <HashLoader color="#6e6189" size={100} />
+      </div>
+  ) : (
+    <>
+
        <div style={{
   margin: '0 auto',
   backgroundColor: '#211e46',
@@ -55,9 +89,12 @@ import React from 'react'
     ))}
   </div>
 </div>
-
+</>
+  )}
      </main>
-   );
+    
+
+);
  }
  
  const facultyData = [
