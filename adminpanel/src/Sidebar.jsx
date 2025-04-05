@@ -41,10 +41,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             
         </ul>
         <footer>
-              Built by 
-              <br></br>Harsh
-              <br></br>Sangeet
-              <br></br>Yash 
+               <a href='https://www.linkedin.com/in/harshrjn/'>Built with &#10084; by Harsh Ranjan</a>
         </footer>
 
         </div>
