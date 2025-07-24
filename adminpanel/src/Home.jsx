@@ -91,7 +91,7 @@ function Home() {
                         <div style={{ marginBottom: "20px", backgroundColor: "", padding: "10px", borderRadius: "15px", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}>
                             <h3 style={{ borderBottom: "2px solid #ddd", paddingBottom: "5px" }}>Related Research Papers:</h3>
                             {papers.map((paper, index) => (
-                                <div key={`paper-${index}`} style={{ border: "3px solid #6e6189", padding: "10px", borderRadius: "15px", marginBottom: "10px", backgroundColor: "#0b0b15", minHeight:'120px', boxShadow:'5px 5px 10px rgba(255, 255, 255, 0.5)', marginBottom: "30px" }}>
+                                <div key={`paper-${index}`} style={{ border: "3px solid #6e6189", padding: "10px", backgroundColor: "#0b0b15", minHeight:'120px', boxShadow:'5px 5px 10px rgba(255, 255, 255, 0.5)', marginBottom: "30px" }}>
                                     <h4 style={{ margin: "10px 0" }}>{paper.title} ({paper.year})</h4>
                                     <p>
                                         <strong>Abstract:</strong><br></br> <br></br>{expandedAbstracts[index] ? paper.abstract : truncateText(paper.abstract)}
