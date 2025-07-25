@@ -42,6 +42,8 @@ try:
     knn_interests = data["knn_interests"]
     papers_df = data["papers_df"]
     interests_df = data["interests_df"]
+    vectorizer.fit(papers_df["abstract"])
+    interests_vectorizer.fit(interests_df["Field of Interest"])
 
 except Exception as e:
     raise RuntimeError(f"Error loading models: {str(e)}")
@@ -95,7 +97,7 @@ async def search_papers(request: QueryRequest):
 async def get_search_history():
     try:
         searches = []
-        async for doc in searches_collection.find().sort("timestamp", -1).limit(50):
+        async for doc in searches_collection.find().sort("timestamp", -1).limit(20):
             doc["_id"] = str(doc["_id"])
             searches.append(doc)
         return {"history": searches}
